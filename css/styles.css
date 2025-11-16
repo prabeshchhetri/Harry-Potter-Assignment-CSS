@@ -40,3 +40,8 @@ h3.magic-font {
     display: block;     
     background-color: #0d0d0d; 
 }
+.accordion-item,
+.review-box {
+  background-color: #1b1b1b !important; 
+  color: #e2e2e2;
+}
