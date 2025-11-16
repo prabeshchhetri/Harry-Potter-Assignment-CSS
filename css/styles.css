@@ -32,3 +32,11 @@ h3.magic-font {
     border-radius: 50%;
     flex-shrink: 0;
 }
+.carousel-inner img {
+    max-height: 350px; 
+    width: auto;       
+    object-fit: contain; 
+    margin: 0 auto;     
+    display: block;     
+    background-color: #0d0d0d; 
+}
