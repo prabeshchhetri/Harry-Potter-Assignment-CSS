@@ -1,47 +1,96 @@
-body {
-  background-color: #151515; 
-  color: #f0f0f0;            
+
+@font-face {
+  font-family: "Magic";
+  src: url(data:font/woff2;base64,d09GMgABAAAAAAm4ABAAAAAAB3gAAANfAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGmYJHG5YIGIAGwE2AiQCJQE2FxwLgVNYBCAFhwoABCAFhwwEBgAEAgACwQ4IBgYCAQEGAAAEAABw0f/v/38/2+EAAACyWXv2+eysterWmre1V8sGxW3p8NoGlo5NZWl5804dGHZpCX04fIwHNK0ZCWljnqdx3QPN/ed7M3sfv07/bvvpzN17Htz3CeOdcWru2C5rx2bCwAAAAAA==)
+  format("woff2");
+  font-style: normal;
+  font-weight: normal;
 }
+
+
+body {
+  background-color: #151515;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
 
 .magic-font {
   font-family: "Magic", serif;
-  color: #e6c879; 
+  color: #e6c879;
   letter-spacing: 1.7px;
   text-shadow: 0 0 8px rgba(212, 184, 111, 0.4);
 }
 
 .lead, p {
-  color: #dcdcdc; 
+  color: #dcdcdc;
 }
 
 h3.magic-font {
   color: #f0d896;
   text-shadow: 0 0 10px rgba(240, 216, 150, 0.6);
 }
-.author-img {
-  filter: drop-shadow(0 0 12px rgba(212, 184, 111, 0.25));
-}
+
+
 .author-and-synopsis {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .author-img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 12px rgba(212, 184, 111, 0.25));
 }
+
 .carousel-inner img {
-    max-height: 350px; 
-    width: auto;       
-    object-fit: contain; 
-    margin: 0 auto;     
-    display: block;     
-    background-color: #0d0d0d; 
+  max-height: 350px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  background-color: #0d0d0d;
 }
+
+
 .accordion-item,
 .review-box {
-  background-color: #1b1b1b !important; 
+  background-color: #1b1b1b !important;
   color: #e2e2e2;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.sparkle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: #d4b86f;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkle-float 1.5s linear infinite;
+}
+
+@keyframes sparkle-float {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-80px) scale(0);
+    opacity: 0;
+  }
 }
